@@ -15,12 +15,12 @@ const reducer = (state, action) => {
                 : { ...state, red: state.red + action.amount }; 
         case 'green':
             return state.green + action.amount > 255 || state.green + action.amount < 0 
-            ? state 
-            : { ...state, green: state.green + action.amount };
+                ? state 
+                : { ...state, green: state.green + action.amount };
         case 'blue':
             return state.blue + action.amount > 255 || state.blue + action.amount < 0 
-            ? state 
-            : { ...state, blue: state.blue + action.amount };
+                ? state 
+                : { ...state, blue: state.blue + action.amount };
         default:
             return state;
     } 
